@@ -26,6 +26,8 @@ class problem:
 
 
 
+
+
 if __name__ == "__main__":
     prob = problem()
     print prob.get_smallest_multiple(11,21)
