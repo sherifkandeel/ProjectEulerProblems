@@ -4,6 +4,8 @@ from datetime import datetime
 
 
 class problem:
+    def __init__(self):
+        pass
 
 
 
@@ -12,7 +14,7 @@ if __name__ == "__main__":
     prob = problem()
 
     end = datetime.now()
-    print "--- %d milli seconds ---" % ((end.microsecond-start.microsecond)/1000)
+    print "--- %s  ---" % (str(end-start))
 
 
 
