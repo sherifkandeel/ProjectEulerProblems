@@ -39,18 +39,23 @@ class problem:
             arr_set.add(toadd)
             print toadd
 
-
         self.dict[self.steps[step + 1]] = arr_set
         # print arr_set
         return len(arr_set)
 
-    def convert_to_char(self,num):
-        if num == 10: return 'a'
-        elif num == 20: return 'b'
-        elif num == 50: return 'c'
-        elif num == 100: return 'd'
-        elif num == 200: return 'e'
-        else: return str(num)
+    def convert_to_char(self, num):
+        if num == 10:
+            return 'a'
+        elif num == 20:
+            return 'b'
+        elif num == 50:
+            return 'c'
+        elif num == 100:
+            return 'd'
+        elif num == 200:
+            return 'e'
+        else:
+            return str(num)
 
 
 # because it's dynamic programming, only that solution worke,d which I got it from  http://www.mathblog.dk/project-euler-31-combinations-english-currency-denominations/
@@ -58,16 +63,17 @@ class problem:
 def something():
     target = 200
     coinSizes = [1, 2, 5, 10, 20, 50, 100, 200]
-    ways ={}
-    for i in range(0,target+1):
-        ways[i]=0
-    ways[0]=1
+    ways = {}
+    for i in range(0, target + 1):
+        ways[i] = 0
+    ways[0] = 1
 
-    for i in range (0,len(coinSizes)):
-        for j in range(coinSizes[i],target+1):
+    for i in range(0, len(coinSizes)):
+        for j in range(coinSizes[i], target + 1):
             ways[j] += ways[j - coinSizes[i]]
 
     print ways
+
 
 if __name__ == "__main__":
     start = datetime.now()
@@ -82,7 +88,11 @@ if __name__ == "__main__":
     # print prob.get_next_step(6)
     # print prob.get_next_step(7)
 
-    something()
+    # something()
+
+    t = 0
+    while t < 0xffffffff:
+        t += 1
 
     end = datetime.now()
     print "--- %s  ---" % (str(end - start))
