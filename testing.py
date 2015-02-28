@@ -1,5 +1,9 @@
-__author__ = 'sherif'
-a = "5234234"
-print a[2]
-print str(bin(8)).replace("0b","")
-print str(bin(8)).strip("0b")
+a = set("1234")
+b = set("12")
+diff = set()
+for i in b:
+      a.remove(i)
+print a, b, diff
+print len(set("1234"))
+# print a
+
