@@ -21,7 +21,7 @@ class problem:
 
     def solve(self):
         dict = {}
-        for m in range(1, 99):
+        for m in range(1, 22):
             for n in range(1, m):
                 for k in range(1, 99):
                     a = k * (m * m - n * n)
