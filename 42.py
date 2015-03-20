@@ -30,7 +30,7 @@ class problem:
 #	print x1,x2
 	if x1>0 and x1==int(x1):
 	    return True
-    	elif x2>0 and x2==int(x2):
+    elif x2>0 and x2==int(x2):
 	    return True
 	else:
 	    return False
